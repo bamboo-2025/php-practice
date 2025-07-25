@@ -2,9 +2,7 @@
 // Q1 変数と文字列
 
 $message = '佐竹';
-var_dump($message);
-$newMessage = '私の名前は「' . $message . '」です。';
-var_dump($newMessage);
+echo '私の名前は「' . $message . '」です。';
 
 
 // Q2 四則演算
@@ -15,6 +13,8 @@ echo $num / 2 . "\n";
 
 
 // Q3 日付操作
+
+date_default_timezone_set('Asia/Tokyo');
 
 $now = date("Y年m月d日 H時i分s秒");
 echo "現在時刻は、" . $now . "です。";
@@ -68,16 +68,6 @@ foreach ($prefectural_capital_cities as $capital) {
 
 // Q8 連想配列-2
 
-$prefectural_capital_cities = [
-    "東京都"   => "新宿区",
-    "神奈川県" => "横浜市",
-    "千葉県"   => "千葉市",
-    "埼玉県"   => "さいたま市",
-    "栃木県"   => "宇都宮市",
-    "群馬県"   => "前橋市",
-    "茨城県"   => "水戸市"
-];
-
 if (isset ($prefectural_capital_cities["埼玉県"])){
   echo "埼玉県の県庁所在地は、" . $prefectural_capital_cities["埼玉県"] . "です。";
 }
@@ -86,6 +76,7 @@ if (isset ($prefectural_capital_cities["埼玉県"])){
 // Q9 連想配列-3
 
 $prefectural_capital_cities = [
+
     "東京都"   => "新宿区",
     "神奈川県" => "横浜市",
     "千葉県"   => "千葉市",
@@ -127,7 +118,7 @@ $price = 1000;
 
 $taxInPrice = calcTaxInPrice($price);
 
-echo "税込価格は {$taxInPrice} 円です。";
+echo "税込価格は{$taxInPrice}円です。";
 
 
 // Q12 関数とif文
