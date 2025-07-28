@@ -9,7 +9,7 @@ echo '私の名前は「' . $message . '」です。';
 
 $num = 5 * 4;
 echo $num . "\n";
-echo $num / 2 . "\n";
+echo $num / 2 ;
 
 
 // Q3 日付操作
@@ -44,7 +44,15 @@ echo ($age < 18) ? "未成年です。" : "成人です。";
 
 // Q6 配列
 
-$kanto = ["東京都", "神奈川県", "埼玉県", "栃木県", "千葉県", "茨城県", "群馬県"];
+$kanto = [
+    "東京都",
+    "神奈川県",
+    "埼玉県",
+    "栃木県",
+    "千葉県",
+    "茨城県",
+    "群馬県"
+  ];
 
 echo $kanto[3] . "と" . $kanto[4] . "は関東地方の都道府県です。";
 
@@ -94,7 +102,7 @@ foreach ($prefectural_capital_cities as $capital => $city) {
   if (in_array($capital, $kanto)){
     echo "{$capital}の県庁所在地は、{$city}です。\n";
   } else {
-    echo "{$capital}は関東地方ではありません。\n";
+    echo "{$capital}は関東地方ではありません。";
   }
 }
 
@@ -105,7 +113,7 @@ function hello($name) {
 }
 
 echo hello("三枝") . "\n";
-echo hello("仙河") . "\n";
+echo hello("仙河");
 
 
 // Q11 関数-2
@@ -132,12 +140,11 @@ function distinguishNum($num) {
 }
 
 echo distinguishNum(4) . "\n";
-echo distinguishNum(7) . "\n";
+echo distinguishNum(7);
 
 
 // Q13 関数とswitch文
 
-<?php
 function evaluateGrade($grade) {
   switch ($grade) {
     case 'A':
@@ -153,6 +160,6 @@ function evaluateGrade($grade) {
 }
 
 echo evaluateGrade('A') . "\n";
-echo evaluateGrade('C') . "\n";
+echo evaluateGrade('C');
 
 ?>
