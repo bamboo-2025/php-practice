@@ -9,7 +9,7 @@ for ($i = 1; $i <= 100; $i++) {
     } elseif ($i % 5 === 0) {
         echo "tac\n";
     } else {
-        echo $i . "\n";
+        echo $i;
     }
 }
 
@@ -34,8 +34,8 @@ foreach ($personalInfos as $info => $person) {
 
 $ageList = [25, 30, 18];
 
-foreach ($personalInfos as $Info => $person) {
-    $personalInfos[$Info]['age'] = $ageList[$Info];
+foreach ($personalInfos as $info => $person) {
+    $personalInfos[$info]['age'] = $ageList[$info];
 }
 
 var_dump($personalInfos);
